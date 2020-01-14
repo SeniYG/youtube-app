@@ -8,9 +8,14 @@ import VideoDetail from "./video_detail";
 const API_KEY = 'AIzaSyDbCN4BqnWGjtat7xrba2uW-XpG5wnI71Y';
 class App extends Component {
 
-    state = {
-        videos: [],
-        selectedVideo : null
+    constructor(props) {
+        super(props);
+        this.state = {
+            videos: [],
+            selectedVideo : null
+        };
+
+        this.handleChange('Getstream.io');
     }
 
     handleChange(searchTerm) {
