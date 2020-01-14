@@ -3,8 +3,9 @@ import '../style/App.css';
 import SearchBar from './search_bar';
 import YTSearch from 'youtube-api-search';
 import VideoList from './video_list';
+import VideoDetail from "./video_detail";
 
-const API_KEY = 'AIzaSyA9meEUfC1qWzdTKI1ceBbYuiOcJ-peRZw';
+const API_KEY = 'AIzaSyDbCN4BqnWGjtat7xrba2uW-XpG5wnI71Y';
 class App extends Component {
 
     state = {
@@ -23,18 +24,23 @@ class App extends Component {
     }
 
     render() {
-       return (
-           <div className='ui container'>
-            <h1>Youtube-App</h1>
-            <SearchBar handleOnChange={searchTerm => this.handleChange(searchTerm)}/>
-            <div className='ui grid'>
-                <div className='six wide column'>
-            <VideoList onVideoSelect= { videoSelect => this.setState({selectedVideo: videoSelect})}
-           videos={this.state.videos}/>
+        return (
+            <div className='ui container' style={{marginTop: '1em'}}>
+                <h1>Youtube Custom App</h1>
+                <SearchBar handleOnChange={searchTerm => this.handleChange(searchTerm)}/>
+                <div className='ui grid'>
+                    <div className='ui row'>
+                        <div className='ten wide column'>
+                            <VideoDetail video={this.state.selectedVideo} />
+                        </div>
+                        <div className='six wide column'>
+                            <VideoList onVideoSelect= { videoSelect => this.setState({selectedVideo: videoSelect})}
+                                       videos={this.state.videos}/>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-       )
+        )
     };
 }
 
