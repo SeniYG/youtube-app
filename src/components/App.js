@@ -31,7 +31,9 @@ class App extends Component {
     render() {
         return (
             <div className='ui container' style={{marginTop: '1em'}}>
+                <div className='ui aligned centered header'>
                 <h1>Youtube Custom App</h1>
+                </div>
                 < div className='search-bar' style={{margin: '10px'}}>
                     <SearchBar handleOnChange={searchTerm => this.handleChange(searchTerm)}/>
                 </div>
