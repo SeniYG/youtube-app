@@ -2,7 +2,7 @@
 A simple video site app using React and Youtube API.
 
 ## Demo
-
+![Image of App](https://octodex.github.com/images/yaktocat.png)
 
 ## Build with
 
