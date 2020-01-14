@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../style/App.css';
+import '../style/video_item.css';
 import SearchBar from './search_bar';
 import YTSearch from 'youtube-api-search';
 import VideoList from './video_list';
@@ -32,7 +32,9 @@ class App extends Component {
         return (
             <div className='ui container' style={{marginTop: '1em'}}>
                 <h1>Youtube Custom App</h1>
-                <SearchBar handleOnChange={searchTerm => this.handleChange(searchTerm)}/>
+                < div className='search-bar' style={{margin: '10px'}}>
+                    <SearchBar handleOnChange={searchTerm => this.handleChange(searchTerm)}/>
+                </div>
                 <div className='ui grid'>
                     <div className='ui row'>
                         <div className='ten wide column'>
