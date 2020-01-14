@@ -6,8 +6,8 @@ const VideoItem = (props) => {
     const imageUrl = video.snippet.thumbnails.default.url;
     return (
         <div className = 'item' onClick={ () => onSelectedVideo(video)}>
-            <div className='ui tiny image'>
-            <img className = 'ui small image' src = {imageUrl} />
+            <div className='image'>
+            <img src = {imageUrl} />
             </div>
                 <div className = 'align content' >
                     <a className = 'header' >{video.snippet.title}</a>
