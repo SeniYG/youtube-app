@@ -1,16 +1,14 @@
-#Custom Youtube App
+## Custom Youtube App
+A simple video site app using React and Youtube API.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
 
-### `npm start`
+## Build with
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- React
+- Semantic UI
+- Youtube API by Google (youtube-api-search package)
 
 ### `npm test`
 
